@@ -2,7 +2,7 @@
 
 namespace Async_Inn.Migrations
 {
-    public partial class addedTables : Migration
+    public partial class initial : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -100,6 +100,43 @@ namespace Async_Inn.Migrations
                         principalTable: "Rooms",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.InsertData(
+                table: "Amenities",
+                columns: new[] { "ID", "Name" },
+                values: new object[,]
+                {
+                    { 1, "cake" },
+                    { 2, "phone" },
+                    { 3, "TV" },
+                    { 4, "Coffee maker" },
+                    { 5, "bed" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Hotels",
+                columns: new[] { "ID", "City", "Name", "Phone", "State", "StreetAddress" },
+                values: new object[,]
+                {
+                    { 1, "seattle", "Whatever", 12345, "Washington", "188 this hotel sucks" },
+                    { 2, "seattle", "tHING", 11232, "Washington", "1024326 YES LANE" },
+                    { 3, "seattle", "Who", 55434, "Washington", "22343 go away" },
+                    { 4, "seattle", "no", 4434, "Washington", "4434 no street" },
+                    { 5, "seattle", "WHY", 93, "Washington", "3343 street street" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Rooms",
+                columns: new[] { "ID", "Layout", "Name" },
+                values: new object[,]
+                {
+                    { 1, 0, "things" },
+                    { 2, 0, "things" },
+                    { 3, 0, "things" },
+                    { 4, 0, "things" },
+                    { 5, 0, "things" },
+                    { 6, 0, "things" }
                 });
 
             migrationBuilder.CreateIndex(

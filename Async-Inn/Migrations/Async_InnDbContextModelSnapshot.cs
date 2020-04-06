@@ -44,6 +44,53 @@ namespace Async_Inn.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Hotels");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            City = "seattle",
+                            Name = "Whatever",
+                            Phone = 12345,
+                            State = "Washington",
+                            StreetAddress = "188 this hotel sucks"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            City = "seattle",
+                            Name = "tHING",
+                            Phone = 11232,
+                            State = "Washington",
+                            StreetAddress = "1024326 YES LANE"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            City = "seattle",
+                            Name = "Who",
+                            Phone = 55434,
+                            State = "Washington",
+                            StreetAddress = "22343 go away"
+                        },
+                        new
+                        {
+                            ID = 4,
+                            City = "seattle",
+                            Name = "no",
+                            Phone = 4434,
+                            State = "Washington",
+                            StreetAddress = "4434 no street"
+                        },
+                        new
+                        {
+                            ID = 5,
+                            City = "seattle",
+                            Name = "WHY",
+                            Phone = 93,
+                            State = "Washington",
+                            StreetAddress = "3343 street street"
+                        });
                 });
 
             modelBuilder.Entity("Async_Inn.Models.Amenities", b =>
@@ -59,6 +106,33 @@ namespace Async_Inn.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Amenities");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Name = "cake"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Name = "phone"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Name = "TV"
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Name = "Coffee maker"
+                        },
+                        new
+                        {
+                            ID = 5,
+                            Name = "bed"
+                        });
                 });
 
             modelBuilder.Entity("Async_Inn.Models.HotelRoom", b =>
@@ -101,6 +175,44 @@ namespace Async_Inn.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Rooms");
+
+                    b.HasData(
+                        new
+                        {
+                            ID = 1,
+                            Layout = 0,
+                            Name = "things"
+                        },
+                        new
+                        {
+                            ID = 2,
+                            Layout = 0,
+                            Name = "things"
+                        },
+                        new
+                        {
+                            ID = 3,
+                            Layout = 0,
+                            Name = "things"
+                        },
+                        new
+                        {
+                            ID = 4,
+                            Layout = 0,
+                            Name = "things"
+                        },
+                        new
+                        {
+                            ID = 5,
+                            Layout = 0,
+                            Name = "things"
+                        },
+                        new
+                        {
+                            ID = 6,
+                            Layout = 0,
+                            Name = "things"
+                        });
                 });
 
             modelBuilder.Entity("Async_Inn.Models.RoomAmenities", b =>
