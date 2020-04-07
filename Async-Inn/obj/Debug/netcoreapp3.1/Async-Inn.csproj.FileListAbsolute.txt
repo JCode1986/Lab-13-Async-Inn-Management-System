@@ -96,7 +96,6 @@ C:\Users\bjohn\Source\Repos\JCode1986\Lab-13-Async-Inn-Management-System\Async-I
 C:\Users\bjohn\Source\Repos\JCode1986\Lab-13-Async-Inn-Management-System\Async-Inn\obj\Debug\netcoreapp3.1\staticwebassets\Async-Inn.StaticWebAssets.xml
 C:\Users\bjohn\Source\Repos\JCode1986\Lab-13-Async-Inn-Management-System\Async-Inn\obj\Debug\netcoreapp3.1\Async-Inn.dll
 C:\Users\bjohn\Source\Repos\JCode1986\Lab-13-Async-Inn-Management-System\Async-Inn\obj\Debug\netcoreapp3.1\Async-Inn.pdb
-C:\Users\bjohn\Source\Repos\JCode1986\Lab-13-Async-Inn-Management-System\Async-Inn\obj\Debug\netcoreapp3.1\Async-Inn.csprojAssemblyReference.cache
 C:\Users\bjohn\Source\Repos\JCode1986\Lab-13-Async-Inn-Management-System\Async-Inn\bin\Debug\netcoreapp3.1\Microsoft.Data.Sqlite.dll
 C:\Users\bjohn\Source\Repos\JCode1986\Lab-13-Async-Inn-Management-System\Async-Inn\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
 C:\Users\bjohn\Source\Repos\JCode1986\Lab-13-Async-Inn-Management-System\Async-Inn\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Sqlite.dll
