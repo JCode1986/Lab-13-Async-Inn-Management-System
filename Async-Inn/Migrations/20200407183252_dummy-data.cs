@@ -2,7 +2,7 @@
 
 namespace Async_Inn.Migrations
 {
-    public partial class initial : Migration
+    public partial class dummydata : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

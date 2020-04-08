@@ -8580,20 +8580,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\bjohn\\.nuget\\packages\\": {}
+    "C:\\Users\\Community\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bjohn\\Source\\Repos\\JCode1986\\Lab-13-Async-Inn-Management-System\\Async-Inn\\Async-Inn.csproj",
+      "projectUniqueName": "C:\\Users\\Community\\Desktop\\VS Repos\\labs\\Async-Inn\\Async-Inn\\Async-Inn.csproj",
       "projectName": "Async-Inn",
-      "projectPath": "C:\\Users\\bjohn\\Source\\Repos\\JCode1986\\Lab-13-Async-Inn-Management-System\\Async-Inn\\Async-Inn.csproj",
-      "packagesPath": "C:\\Users\\bjohn\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bjohn\\Source\\Repos\\JCode1986\\Lab-13-Async-Inn-Management-System\\Async-Inn\\obj\\",
+      "projectPath": "C:\\Users\\Community\\Desktop\\VS Repos\\labs\\Async-Inn\\Async-Inn\\Async-Inn.csproj",
+      "packagesPath": "C:\\Users\\Community\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Community\\Desktop\\VS Repos\\labs\\Async-Inn\\Async-Inn\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "C:\\Users\\bjohn\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\Community\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -8657,7 +8662,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
       }
     }
   }
