@@ -35,6 +35,7 @@ namespace Async_Inn
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
             services.AddTransient<IHotelManager, HotelService>();
+            services.AddTransient<IAmenitiesManager, AmenitiesServices>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
