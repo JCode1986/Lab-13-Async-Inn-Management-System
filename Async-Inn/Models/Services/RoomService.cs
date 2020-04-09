@@ -47,5 +47,11 @@ namespace Async_Inn.Models.Services
             _context.Entry(room).State = EntityState.Modified;
             await _context.SaveChangesAsync();
         }
+
+      /*  public async Task<List<Amenities>> GetAmenities(int roomID)
+        {
+            var Amenities =  _context.RoomAmenities.Where(x => x.RoomID == roomID);
+            return null;
+        }*/
     }
 }
