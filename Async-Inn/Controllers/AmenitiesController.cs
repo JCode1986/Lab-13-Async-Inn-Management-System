@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Async_Inn.Data;
 using Async_Inn.Models;
+using Async_Inn.Models.Interfaces;
 
 namespace Async_Inn.Controllers
 {
@@ -14,25 +15,25 @@ namespace Async_Inn.Controllers
     [ApiController]
     public class AmenitiesController : ControllerBase
     {
-        private readonly Async_InnDbContext _context;
+        private readonly IAmenitiesManager _amenities;
 
-        public AmenitiesController(Async_InnDbContext context)
+        public AmenitiesController(IAmenitiesManager amenities)
         {
-            _context = context;
+            _amenities = amenities;
         }
 
         // GET: api/Amenities
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Amenities>>> GetAmenities()
         {
-            return await _context.Amenities.ToListAsync();
+            return await _amenities.GetAllAmentities();
         }
 
         // GET: api/Amenities/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Amenities>> GetAmenities(int id)
         {
-            var amenities = await _context.Amenities.FindAsync(id);
+            var amenities = await _amenities.GetAmenitiesByID(id);
 
             if (amenities == null)
             {
@@ -45,7 +46,7 @@ namespace Async_Inn.Controllers
         // PUT: api/Amenities/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
-        [HttpPut("{id}")]
+      /*  [HttpPut("{id}")]
         public async Task<IActionResult> PutAmenities(int id, Amenities amenities)
         {
             if (id != amenities.ID)
@@ -53,26 +54,10 @@ namespace Async_Inn.Controllers
                 return BadRequest();
             }
 
-            _context.Entry(amenities).State = EntityState.Modified;
-
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException)
-            {
-                if (!AmenitiesExists(id))
-                {
-                    return NotFound();
-                }
-                else
-                {
-                    throw;
-                }
-            }
+            await _amenities.UpadateAmenities(amenities, id);
 
             return NoContent();
-        }
+        }*/
 
         // POST: api/Amenities
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
@@ -80,8 +65,7 @@ namespace Async_Inn.Controllers
         [HttpPost]
         public async Task<ActionResult<Amenities>> PostAmenities(Amenities amenities)
         {
-            _context.Amenities.Add(amenities);
-            await _context.SaveChangesAsync();
+            await _amenities.CreateAmenities(amenities);
 
             return CreatedAtAction("GetAmenities", new { id = amenities.ID }, amenities);
         }
@@ -90,21 +74,10 @@ namespace Async_Inn.Controllers
         [HttpDelete("{id}")]
         public async Task<ActionResult<Amenities>> DeleteAmenities(int id)
         {
-            var amenities = await _context.Amenities.FindAsync(id);
-            if (amenities == null)
-            {
-                return NotFound();
-            }
-
-            _context.Amenities.Remove(amenities);
-            await _context.SaveChangesAsync();
-
-            return amenities;
+            await _amenities.RemoveAmenties(id);
+            return NoContent();
         }
 
-        private bool AmenitiesExists(int id)
-        {
-            return _context.Amenities.Any(e => e.ID == id);
-        }
+       
     }
 }
