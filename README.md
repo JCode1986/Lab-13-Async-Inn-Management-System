@@ -50,6 +50,11 @@ dotnet run
 ### Overview of Recent Posts
 ![ERD](assets/ERD.png)
 
+### Data from Postman
+![ERD](assets/hotels.png)
+
+![ERD](assets/hotelID.png)
+
 ---
 
 ## Model Properties and Requirements

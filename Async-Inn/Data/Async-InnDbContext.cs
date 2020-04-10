@@ -27,47 +27,47 @@ namespace Async_Inn.Data
                 new Hotel
                 {
                     ID = 1,
-                    Name = "Whatever",
-                    StreetAddress = "188 this hotel sucks",
-                    City = "seattle",
+                    Name = "Hotel1",
+                    StreetAddress = "188 Amazing Lane",
+                    City = "Seattle",
                     State = "Washington",
-                    Phone = 12345
+                    Phone = 123456789
                 },
                 new Hotel
                 {
                     ID = 2,
-                    Name = "tHING",
-                    StreetAddress = "1024326 YES LANE",
-                    City = "seattle",
+                    Name = "Hotel2",
+                    StreetAddress = "1024326 Yes Lane",
+                    City = "Seattle",
                     State = "Washington",
-                    Phone = 11232
+                    Phone = 987654321
                 },
                 new Hotel
                 {
                     ID = 3,
-                    Name = "Who",
-                    StreetAddress = "22343 go away",
-                    City = "seattle",
+                    Name = "Hotel3",
+                    StreetAddress = "22343 Leaf Drive",
+                    City = "Seattle",
                     State = "Washington",
-                    Phone = 55434
+                    Phone = 187654329
                 },
                 new Hotel
                 {
                     ID = 4,
-                    Name = "no",
-                    StreetAddress = "4434 no street",
-                    City = "seattle",
+                    Name = "Hotel4",
+                    StreetAddress = "4434 No Street",
+                    City = "Seattle",
                     State = "Washington",
-                    Phone = 4434
+                    Phone = 176954328
                 },
                 new Hotel
                 {
                     ID = 5,
-                    Name = "WHY",
-                    StreetAddress = "3343 street street",
-                    City = "seattle",
+                    Name = "Hotel5",
+                    StreetAddress = "3343 Street MCgee",
+                    City = "Seattle",
                     State = "Washington",
-                    Phone = 00093
+                    Phone = 769815432
                 });
 
             modelBuilder.Entity<Room>().HasData(
@@ -79,9 +79,9 @@ namespace Async_Inn.Data
                 },              
                 new Room
                 {
-                ID = 2,
-                Name = "things",
-                Layout = Layout.Studio
+                    ID = 2,
+                    Name = "things",
+                    Layout = Layout.Studio
                 },
                 new Room
                 {

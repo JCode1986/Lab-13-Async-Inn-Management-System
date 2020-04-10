@@ -10,8 +10,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Async_Inn.Migrations
 {
     [DbContext(typeof(Async_InnDbContext))]
-    [Migration("20200407183252_dummy-data")]
-    partial class dummydata
+    [Migration("20200410030749_data")]
+    partial class data
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -51,47 +51,47 @@ namespace Async_Inn.Migrations
                         new
                         {
                             ID = 1,
-                            City = "seattle",
-                            Name = "Whatever",
-                            Phone = 12345,
+                            City = "Seattle",
+                            Name = "Hotel1",
+                            Phone = 123456789,
                             State = "Washington",
-                            StreetAddress = "188 this hotel sucks"
+                            StreetAddress = "188 Amazing Lane"
                         },
                         new
                         {
                             ID = 2,
-                            City = "seattle",
-                            Name = "tHING",
-                            Phone = 11232,
+                            City = "Seattle",
+                            Name = "Hotel2",
+                            Phone = 987654321,
                             State = "Washington",
-                            StreetAddress = "1024326 YES LANE"
+                            StreetAddress = "1024326 Yes Lane"
                         },
                         new
                         {
                             ID = 3,
-                            City = "seattle",
-                            Name = "Who",
-                            Phone = 55434,
+                            City = "Seattle",
+                            Name = "Hotel3",
+                            Phone = 187654329,
                             State = "Washington",
-                            StreetAddress = "22343 go away"
+                            StreetAddress = "22343 Leaf Drive"
                         },
                         new
                         {
                             ID = 4,
-                            City = "seattle",
-                            Name = "no",
-                            Phone = 4434,
+                            City = "Seattle",
+                            Name = "Hotel4",
+                            Phone = 176954328,
                             State = "Washington",
-                            StreetAddress = "4434 no street"
+                            StreetAddress = "4434 No Street"
                         },
                         new
                         {
                             ID = 5,
-                            City = "seattle",
-                            Name = "WHY",
-                            Phone = 93,
+                            City = "Seattle",
+                            Name = "Hotel5",
+                            Phone = 769815432,
                             State = "Washington",
-                            StreetAddress = "3343 street street"
+                            StreetAddress = "3343 Street MCgee"
                         });
                 });
 

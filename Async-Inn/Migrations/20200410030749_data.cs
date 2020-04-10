@@ -2,7 +2,7 @@
 
 namespace Async_Inn.Migrations
 {
-    public partial class dummydata : Migration
+    public partial class data : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -119,11 +119,11 @@ namespace Async_Inn.Migrations
                 columns: new[] { "ID", "City", "Name", "Phone", "State", "StreetAddress" },
                 values: new object[,]
                 {
-                    { 1, "seattle", "Whatever", 12345, "Washington", "188 this hotel sucks" },
-                    { 2, "seattle", "tHING", 11232, "Washington", "1024326 YES LANE" },
-                    { 3, "seattle", "Who", 55434, "Washington", "22343 go away" },
-                    { 4, "seattle", "no", 4434, "Washington", "4434 no street" },
-                    { 5, "seattle", "WHY", 93, "Washington", "3343 street street" }
+                    { 1, "Seattle", "Hotel1", 123456789, "Washington", "188 Amazing Lane" },
+                    { 2, "Seattle", "Hotel2", 987654321, "Washington", "1024326 Yes Lane" },
+                    { 3, "Seattle", "Hotel3", 187654329, "Washington", "22343 Leaf Drive" },
+                    { 4, "Seattle", "Hotel4", 176954328, "Washington", "4434 No Street" },
+                    { 5, "Seattle", "Hotel5", 769815432, "Washington", "3343 Street MCgee" }
                 });
 
             migrationBuilder.InsertData(
