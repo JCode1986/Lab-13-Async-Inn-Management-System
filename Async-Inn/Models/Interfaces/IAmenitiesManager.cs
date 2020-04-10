@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Async_Inn.DTO;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace Async_Inn.Models.Interfaces
 
         Task UpadateAmenities(int amenitesID, Amenities amenities);
 
-        Task<List<Amenities>> GetAllAmentities();
+        Task<List<AmenityDTO>> GetAllAmenities();
 
         Task<Amenities> GetAmenitiesByID(int amenitiesID);
 

@@ -1,4 +1,5 @@
 ﻿using Async_Inn.Data;
+using Async_Inn.DTO;
 using Async_Inn.Models.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -24,7 +25,18 @@ namespace Async_Inn.Models.Services
             return amenities;
         }
 
-        public async Task<List<Amenities>> GetAllAmentities() => await _context.Amenities.ToListAsync();
+        public async Task<List<AmenityDTO>> GetAllAmenities()
+        {
+            var allAmenities = await _context.Amenities.ToListAsync();
+            List<AmenityDTO> allDTOs = new List<AmenityDTO>();
+
+            foreach (var item in allAmenities)
+            {
+                allDTOs.Add(ConvertToDTO(item));
+            }
+
+            return allDTOs;
+        }
 
         public async Task<Amenities> GetAmenitiesByID(int amenitiesID) => await _context.Amenities.FindAsync(amenitiesID);
 
@@ -33,6 +45,17 @@ namespace Async_Inn.Models.Services
             Amenities amenities = await GetAmenitiesByID(amenitiesID);
             _context.Amenities.Remove(amenities);
             await _context.SaveChangesAsync();
+        }
+
+        private AmenityDTO ConvertToDTO(Amenities amenity)
+        {
+            AmenityDTO adto = new AmenityDTO()
+            {
+                Name = amenity.Name,
+                ID = amenity.ID
+            };
+
+            return adto;
         }
 
         public Task UpadateAmenities(int amenitesID, Amenities amenities)

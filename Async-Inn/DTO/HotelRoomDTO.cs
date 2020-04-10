@@ -7,11 +7,11 @@ namespace Async_Inn.DTO
 {
     public class HotelRoomDTO
     {
-        public int ID { get; set; }
-        public string Name { get; set; }
-        public string StreetAddress { get; set; }
-        public string City { get; set; }
-        public string State { get; set; }
-        public string Phone { get; set; }
+        public int HotelID { get; set; }
+        public int RoomNumber { get; set; }
+        public decimal Rate { get; set; }
+        public bool PetFriendly { get; set; }
+        public int RoomID { get; set; }
+        public RoomDTO Room { get; set; }
     }
 }

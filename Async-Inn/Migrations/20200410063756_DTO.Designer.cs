@@ -4,14 +4,16 @@ using Async_Inn.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace Async_Inn.Migrations
 {
     [DbContext(typeof(Async_InnDbContext))]
-    partial class Async_InnDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200410063756_DTO")]
+    partial class DTO
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -157,40 +159,6 @@ namespace Async_Inn.Migrations
                     b.HasIndex("RoomID");
 
                     b.ToTable("HotelRooms");
-
-                    b.HasData(
-                        new
-                        {
-                            HotelID = 1,
-                            RoomNumber = 123,
-                            PetFriendly = true,
-                            Rate = 120m,
-                            RoomID = 1
-                        },
-                        new
-                        {
-                            HotelID = 2,
-                            RoomNumber = 220,
-                            PetFriendly = false,
-                            Rate = 150m,
-                            RoomID = 1
-                        },
-                        new
-                        {
-                            HotelID = 1,
-                            RoomNumber = 101,
-                            PetFriendly = false,
-                            Rate = 75m,
-                            RoomID = 2
-                        },
-                        new
-                        {
-                            HotelID = 2,
-                            RoomNumber = 111,
-                            PetFriendly = true,
-                            Rate = 175m,
-                            RoomID = 2
-                        });
                 });
 
             modelBuilder.Entity("Async_Inn.Models.Room", b =>
