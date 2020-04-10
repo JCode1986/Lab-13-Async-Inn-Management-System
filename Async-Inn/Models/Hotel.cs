@@ -13,7 +13,7 @@ namespace Async_Inn.Data.Models
         public string StreetAddress { get; set; } 
         public string City { get; set; }
         public string State { get; set; }
-        public int Phone { get; set; }
+        public string Phone { get; set; }
 
         // Navigation property
         public List<HotelRoom> HotelRooms { get; set; }

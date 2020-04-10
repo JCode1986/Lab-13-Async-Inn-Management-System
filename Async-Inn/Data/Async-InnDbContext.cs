@@ -31,7 +31,7 @@ namespace Async_Inn.Data
                     StreetAddress = "188 Amazing Lane",
                     City = "Seattle",
                     State = "Washington",
-                    Phone = 123456789
+                    Phone = "123456789"
                 },
                 new Hotel
                 {
@@ -40,7 +40,7 @@ namespace Async_Inn.Data
                     StreetAddress = "1024326 Yes Lane",
                     City = "Seattle",
                     State = "Washington",
-                    Phone = 987654321
+                    Phone = "987654321"
                 },
                 new Hotel
                 {
@@ -49,7 +49,7 @@ namespace Async_Inn.Data
                     StreetAddress = "22343 Leaf Drive",
                     City = "Seattle",
                     State = "Washington",
-                    Phone = 187654329
+                    Phone = "187654329"
                 },
                 new Hotel
                 {
@@ -58,7 +58,7 @@ namespace Async_Inn.Data
                     StreetAddress = "4434 No Street",
                     City = "Seattle",
                     State = "Washington",
-                    Phone = 176954328
+                    Phone = "176954328"
                 },
                 new Hotel
                 {
@@ -67,8 +67,9 @@ namespace Async_Inn.Data
                     StreetAddress = "3343 Street MCgee",
                     City = "Seattle",
                     State = "Washington",
-                    Phone = 769815432
-                });
+                    Phone = "769815432"
+                }
+            );
 
             modelBuilder.Entity<Room>().HasData(
                 new Room
@@ -106,7 +107,8 @@ namespace Async_Inn.Data
                     ID = 6,
                     Name = "things",
                     Layout = Layout.Studio
-                });
+                }
+            );
 
             modelBuilder.Entity<Amenities>().HasData(
                 new Amenities
@@ -133,9 +135,46 @@ namespace Async_Inn.Data
                 {
                     ID = 5,
                     Name = "bed"
-                }); 
+                }
+            );
+
+            modelBuilder.Entity<HotelRoom>().HasData(
+                new HotelRoom
+                {
+                    HotelID = 1,
+                    PetFriendly = true,
+                    Rate = 120m,
+                    RoomID = 1,
+                    RoomNumber = 123
+                },
+                new HotelRoom
+                {
+                    HotelID = 2,
+                    PetFriendly = false,
+                    Rate = 150m,
+                    RoomID = 1,
+                    RoomNumber = 220
+                },
+                new HotelRoom
+                {
+                    HotelID = 1,
+                    PetFriendly = false,
+                    Rate = 75m,
+                    RoomID = 2,
+                    RoomNumber = 101
+                },
+                new HotelRoom
+                {
+                    HotelID = 2,
+                    PetFriendly = true,
+                    Rate = 175m,
+                    RoomID = 2,
+                    RoomNumber = 111
+                }
+            );
+
         }
-                 
+
         public DbSet<Hotel> Hotels { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<HotelRoom> HotelRooms { get; set; }

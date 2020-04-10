@@ -8,6 +8,7 @@ using Microsoft.EntityFrameworkCore;
 using Async_Inn.Data;
 using Async_Inn.Data.Models;
 using Async_Inn.Models.Interfaces;
+using Async_Inn.DTO;
 
 namespace Async_Inn.Controllers
 {
@@ -31,7 +32,7 @@ namespace Async_Inn.Controllers
 
         // GET: api/Hotels/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Hotel>> GetHotel(int id)
+        public async Task<ActionResult<HotelDTO>> GetHotel(int id)
         {
             var hotel = await _hotel.GetHotelByID(id);
 
