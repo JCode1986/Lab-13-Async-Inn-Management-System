@@ -38,6 +38,9 @@ namespace Async_Inn.Models.Services
             hoteldto.Name = hotel.Name;
             hoteldto.Phone = hotel.Phone;
             hoteldto.City = hotel.City;
+            hoteldto.ID = hotel.ID;
+            hoteldto.State = hotel.State;
+            hoteldto.StreetAddress = hotel.StreetAddress;
 
             var hotelRooms = await _context.HotelRooms.Where(r => r.HotelID == hotelID)
                                                 .Include(d => d.Room)
