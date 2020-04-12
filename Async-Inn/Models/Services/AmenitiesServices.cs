@@ -18,11 +18,12 @@ namespace Async_Inn.Models.Services
             _context = context;
 
         }
-        public async Task<Amenities> CreateAmenities(Amenities amenities)
+        public async Task<AmenityDTO> CreateAmenities(Amenities amenities)
         {
+            var amenitydto = ConvertToDTO(amenities);
             _context.Amenities.Add(amenities);
             await _context.SaveChangesAsync();
-            return amenities;
+            return amenitydto;
         }
 
         public async Task<List<AmenityDTO>> GetAllAmenities()
@@ -38,13 +39,18 @@ namespace Async_Inn.Models.Services
             return allDTOs;
         }
 
-        public async Task<Amenities> GetAmenitiesByID(int amenitiesID) => await _context.Amenities.FindAsync(amenitiesID);
-
-        public async Task RemoveAmenties(int amenitiesID)
+        public async Task<AmenityDTO> GetAmenitiesByID(int amenitiesID)
         {
-            Amenities amenities = await GetAmenitiesByID(amenitiesID);
-            _context.Amenities.Remove(amenities);
+            Amenities amenities = await _context.Amenities.FindAsync(amenitiesID);
+            return ConvertToDTO(amenities);
+        }
+
+        public async Task<Amenities> RemoveAmenties(int amenitiesID)
+        {
+            Amenities amenity = await _context.Amenities.FindAsync(amenitiesID);
+            _context.Amenities.Remove(amenity);
             await _context.SaveChangesAsync();
+            return amenity;
         }
 
         private AmenityDTO ConvertToDTO(Amenities amenity)
@@ -57,7 +63,6 @@ namespace Async_Inn.Models.Services
 
             return adto;
         }
-
         public Task UpadateAmenities(int amenitesID, Amenities amenities)
         {
             throw new NotImplementedException();
