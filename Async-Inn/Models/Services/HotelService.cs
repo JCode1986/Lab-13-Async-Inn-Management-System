@@ -49,7 +49,7 @@ namespace Async_Inn.Models.Services
             return hDTO;
         } 
 
-        public async Task<List<HotelRoom>> GetHotelRooms(int hotelID)
+        public async Task<List<HotelRoomDTO>> GetHotelRooms(int hotelID)
         {
             var hotelrooms = await _context.HotelRooms.Where(r => r.HotelID == hotelID)
                                                     .Include(d => d.Room)
@@ -61,7 +61,7 @@ namespace Async_Inn.Models.Services
                 HotelRoomDTO roomDTO = await _hotelRoom.GetHotelRoomByID(room.RoomID);
                 hotelRooms.Add(roomDTO);
             }
-            return hotelrooms;
+            return hotelRooms;
         }
 
         /// <summary>
