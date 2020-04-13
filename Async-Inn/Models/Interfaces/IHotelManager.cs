@@ -11,8 +11,10 @@ namespace Async_Inn.Models.Interfaces
     {
         Task<Hotel> CreateHotel(Hotel hotel);
         Task UpdateHotel(int hotelID, Hotel hotel);
-        Task<List<Hotel>> GetAllHotels();
+        Task<List<HotelDTO>> GetAllHotels();
         Task<HotelDTO> GetHotelByID(int hotelID);
-        Task RemoveHotel(int hotelID);
+        Task<Hotel> RemoveHotel(int hotelID);
+
+        Task<List<HotelRoomDTO>> GetHotelRooms(int hotelID);
     }
 }

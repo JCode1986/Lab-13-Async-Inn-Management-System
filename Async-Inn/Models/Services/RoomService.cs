@@ -1,4 +1,5 @@
 ﻿using Async_Inn.Data;
+using Async_Inn.DTO;
 using Async_Inn.Models.Interfaces;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -24,23 +25,25 @@ namespace Async_Inn.Models.Services
             return room;
         }
 
-        public Task<List<Room>> GetAllRooms()
+        public Task<List<RoomDTO>> GetAllRooms()
+        {
+            throw new NotImplementedException();
+        }
+        public Task<RoomDTO> GetRoomByID(int roomID)
         {
             throw new NotImplementedException();
         }
 
-        public async Task<Room> GetRoomByID(int roomID)
+        public Task RemoveRoom(int roomID)
         {
-            Room room = await _context.Rooms.FindAsync(roomID);
-            return room;
+            throw new NotImplementedException();
         }
 
-        public async Task RemoveRoom(int roomID)
+        public Task<List<AmenityDTO>> AmenitiesByRoomID(int ID)
         {
-            Room room = await GetRoomByID(roomID);
-            _context.Rooms.Remove(room);
-            await _context.SaveChangesAsync();
+            throw new NotImplementedException();
         }
+
 
         public async Task UpdateRoom(int roomID, Room room)
         {
@@ -48,10 +51,15 @@ namespace Async_Inn.Models.Services
             await _context.SaveChangesAsync();
         }
 
-      /*  public async Task<List<Amenities>> GetAmenities(int roomID)
+        public RoomDTO ConverToDTO(Room room)
         {
-            var Amenities =  _context.RoomAmenities.Where(x => x.RoomID == roomID);
-            return null;
-        }*/
+            RoomDTO rdto = new RoomDTO()
+            {
+                ID = room.ID,
+                Name = room.Name,
+                Layout = room.Layout.ToString()
+            };
+            return rdto;
+        }
     }
 }
